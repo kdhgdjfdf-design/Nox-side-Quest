@@ -1,0 +1,15 @@
+{
+  "name": "NOX SIDE QUEST",
+  "short_name": "NOX QUEST",
+  "description": "ثلاثون دقيقة لاكتشاف مهارة جديدة كل يوم",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#080c18",
+  "theme_color": "#090d1b",
+  "icons": [
+    {"src":"./icons/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
