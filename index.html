@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d1b">
+  <meta name="description" content="NOX SIDE QUEST — ثلاثون دقيقة لاكتشاف مهارة جديدة كل يوم.">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <title>NOX SIDE QUEST</title>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="NOX SIDE QUEST"><span class="brand-mark">N</span><span>NOX <b>SIDE QUEST</b></span></a>
+    <span class="daily-tag">30 دقيقة لنفسك</span>
+  </header>
+  <main class="shell">
+    <section class="welcome">
+      <p class="eyebrow">YOUR DAILY SIDE QUEST</p>
+      <h1>كل يوم، <span>شيء جديد.</span></h1>
+      <p class="muted">مساحة صغيرة تتعلم فيها وتجرّب اهتمامات مختلفة، بلا ضغط ولا سباق.</p>
+    </section>
+    <section class="level-card">
+      <div><p class="eyebrow">مستواك الحالي</p><h2 id="levelName">المستكشف · المستوى 1</h2><p class="muted"><span id="xpValue">0</span> XP</p></div>
+      <div class="level-orb">✦</div>
+      <div class="progress-track"><span id="xpBar"></span></div>
+      <p class="progress-caption" id="xpCaption">0 / 100 XP للمستوى التالي</p>
+    </section>
+    <section class="section-heading"><div><p class="eyebrow">TODAY</p><h2>مهمتك اليوم</h2></div><span class="pill">مهمة قصيرة</span></section>
+    <article class="quest-card">
+      <div class="quest-icon">🇩🇪</div>
+      <div class="quest-copy"><span class="category">اللغة الألمانية</span><h3>أول خمس كلمات</h3><p class="muted">تعرّف على خمس كلمات ألمانية واكتب جملة بسيطة بإحداها.</p><div class="quest-meta"><span>◷ 30 دقيقة</span><span>✦ 25 XP</span></div></div>
+      <button id="startQuest" class="primary">ابدأ المهمة <span>←</span></button>
+    </article>
+    <section class="section-heading"><div><p class="eyebrow">EXPLORE</p><h2>مساراتك</h2></div></section>
+    <section class="interest-grid" id="interestGrid">
+      <button class="interest"><span>🌍</span><b>اللغات</b><small>ألمانية وغيرها</small></button>
+      <button class="interest"><span>♟</span><b>المنطق والشطرنج</b><small>فكّر بطريقة مختلفة</small></button>
+      <button class="interest"><span>☾</span><b>المعرفة الإسلامية</b><small>تعلّم وتدبّر</small></button>
+      <button class="interest"><span>🧬</span><b>الطب والعلوم</b><small>اكتشف جسم الإنسان</small></button>
+      <button class="interest"><span>⌘</span><b>التقنية والبرمجة</b><small>اصنع شيئًا جديدًا</small></button>
+      <button class="interest"><span>✎</span><b>الإبداع</b><small>تصميم ومونتاج</small></button>
+      <button class="interest"><span>🍳</span><b>مهارات الحياة</b><small>أشياء تنفعك يوميًا</small></button>
+    </section>
+    <section class="history-card"><div class="section-heading"><div><p class="eyebrow">YOUR JOURNEY</p><h2>سجل إنجازاتك</h2></div></div><p id="emptyHistory" class="muted">رحلتك تبدأ بأول مهمة. لا بأس إن فاتك يوم؛ ارجع وقتما تحب.</p><ul id="historyList" class="history-list"></ul></section>
+    <footer>NOX SIDE QUEST <span>·</span> خطوة صغيرة كل يوم</footer>
+  </main>
+  <dialog id="questDialog">
+    <form method="dialog" class="dialog-card">
+      <button class="close" aria-label="إغلاق">×</button>
+      <p class="eyebrow">DAILY QUEST · GERMAN</p><h2>أول خمس كلمات</h2>
+      <p class="muted">اقرأ الكلمات وحاول نطقها، ثم اكتب جملة قصيرة بإحدى الكلمات.</p>
+      <div class="word-list"><div><b>Hallo</b><span>مرحبًا</span></div><div><b>Danke</b><span>شكرًا</span></div><div><b>Bitte</b><span>من فضلك / العفو</span></div><div><b>Wasser</b><span>ماء</span></div><div><b>Haus</b><span>منزل</span></div></div>
+      <label for="reflection">اكتب جملة أو ملاحظة تعلمتها</label><textarea id="reflection" rows="3" placeholder="مثلاً: Hallo!"></textarea>
+      <button id="completeQuest" class="primary full" type="button">أنهيت المهمة · +25 XP</button>
+    </form>
+  </dialog>
+  <script src="./app.js"></script>
+</body>
+</html>
