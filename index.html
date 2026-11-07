@@ -49,10 +49,10 @@
   <dialog id="questDialog">
     <form method="dialog" class="dialog-card">
       <button class="close" aria-label="إغلاق">×</button>
-      <p class="eyebrow">DAILY QUEST · GERMAN</p><h2>أول خمس كلمات</h2>
-      <p class="muted">اقرأ الكلمات وحاول نطقها، ثم اكتب جملة قصيرة بإحدى الكلمات.</p>
-      <div class="word-list"><div><b>Hallo</b><span>مرحبًا</span></div><div><b>Danke</b><span>شكرًا</span></div><div><b>Bitte</b><span>من فضلك / العفو</span></div><div><b>Wasser</b><span>ماء</span></div><div><b>Haus</b><span>منزل</span></div></div>
-      <label for="reflection">اكتب جملة أو ملاحظة تعلمتها</label><textarea id="reflection" rows="3" placeholder="مثلاً: Hallo!"></textarea>
+      <p class="eyebrow" id="questEyebrow">DAILY QUEST</p><h2 id="questTitle">مهمة اليوم</h2>
+      <p class="muted" id="questDescription">اختر مسارًا وابدأ بخطوة صغيرة.</p>
+      <div class="word-list" id="questItems"></div>
+      <label for="reflection" id="reflectionLabel">اكتب ملاحظة تعلمتها</label><textarea id="reflection" rows="3" placeholder="اكتب هنا..."></textarea>
       <button id="completeQuest" class="primary full" type="button">أنهيت المهمة · +25 XP</button>
     </form>
   </dialog>
