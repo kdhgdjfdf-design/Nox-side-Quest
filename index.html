@@ -8,6 +8,7 @@
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./icons/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./lessons.css">
   <title>NOX SIDE QUEST</title>
 </head>
 <body>
@@ -56,6 +57,15 @@
       <button id="completeQuest" class="primary full" type="button">أنهيت المهمة · +25 XP</button>
     </form>
   </dialog>
+  <dialog id="lessonDialog" aria-label="درس تفاعلي">
+    <div class="lv-top">
+      <form method="dialog"><button class="lv-close" aria-label="إغلاق">×</button></form>
+      <div class="lv-track"><span id="lessonBar"></span></div>
+      <span class="lv-score" id="lessonScore">✓ 0</span>
+    </div>
+    <div id="lessonBody"></div>
+  </dialog>
   <script src="./app.js"></script>
+  <script src="./lessons.js"></script>
 </body>
 </html>

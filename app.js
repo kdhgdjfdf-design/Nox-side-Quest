@@ -42,7 +42,8 @@ function openQuest(quest){
  $('completeQuest').textContent=todaysCompletions()[quest.id]?'أنجزت هذه المهمة اليوم':'أنهيت المهمة · +25 XP';
  $('questDialog').showModal();
 }
-$('startQuest').addEventListener('click',()=>openQuest(quests[0]));
+function openAny(quest){if(!(window.openLesson&&window.openLesson(quest.id)))openQuest(quest)}
+$('startQuest').addEventListener('click',()=>openAny(quests[0]));
 $('completeQuest').addEventListener('click',()=>{
  const completed=todaysCompletions();
  if(completed[activeQuest.id]){$('questDialog').close();toast('أنجزت هذا المسار اليوم. يمكنك العودة إليه للمراجعة ✦');return}
@@ -52,7 +53,7 @@ $('completeQuest').addEventListener('click',()=>{
  state.history.unshift({title:activeQuest.title+' · +25 XP'+(note?' — '+note:''),date:new Date().toLocaleDateString('ar-MA')});
  save();$('questDialog').close();toast('أحسنت! أُضيفت 25 نقطة إلى رصيدك ✦');
 });
-document.querySelectorAll('.interest').forEach((button,i)=>button.addEventListener('click',()=>openQuest(quests[i])));
+document.querySelectorAll('.interest').forEach((button,i)=>button.addEventListener('click',()=>openAny(quests[i])));
 function toast(message){const el=document.createElement('div');el.className='toast';el.textContent=message;document.body.append(el);setTimeout(()=>el.remove(),2400)}
 if('serviceWorker'in navigator&&location.protocol.startsWith('http'))window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
 let deferredPrompt;

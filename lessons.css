@@ -1,0 +1,51 @@
+#lessonDialog{width:min(94vw,440px);max-height:94vh;overflow:auto}
+.lv-top{display:flex;align-items:center;gap:12px;padding:16px 18px 0}
+.lv-top form{margin:0;display:contents}
+.lv-close{width:40px;height:40px;border-radius:12px;border:1px solid var(--line);background:var(--panel);color:var(--text);font-size:22px;cursor:pointer;flex:none}
+.lv-track{flex:1;height:9px;border-radius:20px;background:#252d44;overflow:hidden}
+.lv-track span{display:block;height:100%;width:5%;border-radius:20px;background:linear-gradient(90deg,#7667f6,#5aaeff);transition:width .3s}
+.lv-score{font-size:13px;font-weight:700;color:#b9b3ff;min-width:44px;text-align:left}
+#lessonBody{padding:14px 20px 22px;display:flex;flex-direction:column;gap:12px}
+.lv-title{font-size:23px;margin:0}
+.lv-visual{display:flex;justify-content:center}
+.lv-card{width:100%;background:#0e1527;border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center}
+.lv-eyebrow{font-size:12px;color:#a69cff;font-weight:600}
+.lv-row{display:flex;align-items:center;gap:12px}
+.lv-big{font-size:38px;font-weight:700;line-height:1.3}
+.lv-big small{font-size:18px;color:var(--muted);font-weight:500}
+.lv-sub{font-size:14px;color:var(--muted)}
+.lv-green{font-size:22px;font-weight:700;color:#7be0b4}
+.lv-text{font-size:15px;color:#c3cbe6;line-height:1.9}
+.lv-badge{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#7c6cf5,#4f9be8);font-size:22px;font-weight:700}
+.lv-speak{width:44px;height:44px;border-radius:50%;border:0;display:grid;place-items:center;background:linear-gradient(135deg,#7c6cf5,#4f9be8);color:#fff;cursor:pointer}
+.lv-cat{display:flex;align-items:flex-end;gap:10px}
+.lv-cat svg{flex:none}
+.lv-bubble{flex:1;padding:12px 14px;background:#17223d;border:1px solid #2a3a63;border-radius:18px 18px 6px 18px;font-size:15px;line-height:1.8}
+.lv-q{font-size:16px;font-weight:600;line-height:1.7;margin-bottom:2px}
+.lv-options{display:flex;flex-direction:column;gap:8px}
+.lv-options.ltr{}
+.lv-opt{min-height:48px;padding:8px 12px;border-radius:14px;border:1.5px solid var(--line);background:#0e1527;color:var(--text);font:inherit;font-size:16px;font-weight:600;cursor:pointer}
+.lv-opt:hover{border-color:#8275ff}
+.lv-opt.ok{border-color:#3ecf8e;background:#0f2a26}
+.lv-opt.bad{border-color:#f0707a;background:#2a1420}
+.lv-fb{font-size:14px;font-weight:600}
+.lv-fb.ok{color:#3ecf8e}.lv-fb.bad{color:#ff8d96}
+.lv-build{display:flex;flex-direction:column;gap:10px}
+.lv-slot{min-height:54px;border:1.5px dashed #3a4a85;border-radius:14px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:6px 8px}
+.lv-pool{display:flex;flex-wrap:wrap;gap:8px;min-height:44px}
+.lv-tile{height:40px;padding:0 16px;border-radius:12px;border:1.5px solid var(--line);background:#0e1527;color:var(--text);font:inherit;font-size:16px;font-weight:600;cursor:pointer}
+.lv-tile.on{border-color:#7c6cf5;background:#1e2750}
+.lv-board{display:grid;grid-template-columns:repeat(8,1fr);width:min(100%,320px);border-radius:12px;overflow:hidden;border:2px solid #2a3a63}
+.lv-sq{aspect-ratio:1;display:grid;place-items:center;font-size:clamp(20px,7vw,30px);line-height:1;color:#12152a}
+.lv-sq.w{color:#fff;text-shadow:0 0 2px #12152a,0 0 2px #12152a,0 0 3px #12152a}
+.lv-body{height:210px;width:auto}
+.lv-egg{width:min(100%,300px);height:auto}
+.lv-code{width:100%;display:flex;flex-direction:column;gap:8px}
+.lv-pre{margin:0;background:#0b1020;border:1px solid #243258;border-radius:14px;padding:12px 14px;font-family:'Courier New',monospace;font-size:15px;line-height:1.8;min-height:64px;white-space:pre;overflow-x:auto;color:#d7dcf0}
+.lv-out{margin:0;background:#111a2e;border:1px dashed #3a4a85;border-radius:12px;padding:8px 14px;font-family:'Courier New',monospace;font-size:14px;color:#7be0b4;min-height:44px;white-space:pre-wrap}
+.lv-trans{position:relative;width:100%;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(135deg,#17306b,#0d1a3d);border:1px solid #2a3a63}
+.lv-trans i{position:absolute;display:block}
+.lv-trans .a{left:8%;top:20%;width:36%;height:60%;border-radius:50%;background:#7c6cf5}
+.lv-trans .b{left:40%;top:36%;width:42%;height:42%;border-radius:14px;background:#4f9be8}
+.lv-trans .sceneB{top:0;height:100%;background:#e8a54b}
+.lv-trans em{position:absolute;left:10px;bottom:8px;font-style:normal;font-size:12px;padding:3px 10px;border-radius:20px;background:#080b17cc;color:#d7dcf0}
